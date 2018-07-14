@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="img/favicon.png" rel="shortcut icon" >
+      <title>Time to Stop</title>
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style2.css" rel="stylesheet">
+      <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+      <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+   </head>
+   <body onload="init()">
+      <div class="container" style="padding-left: 0; padding-right: 0px;">
+      <div class="row" style="padding-bottom: 75px;">
+         <div class="col-lg-12">
+          <h1>Do. Or do not. There is no try.</h1>
+
+          <p style="padding-top: 10px; font-size: 0.9em">-Yoda</p>
+          <hr class="star-light">
+          <p>Wir alle wissen das Rauchen überwiegend negative Auswirkungen auf uns und unsere Umwelt hat. Da wir aber wie Ratten sozial sehr abhängig sind und es schwerer ist alleine aufzuhören, wenn das Umfeld nicht mitzieht, schaffe ich hier einen Anreiz für uns alle aufzuhören. Der <span style="color: red">Reset</span> Button muss 10 mal gedrückt werden!</p><!--Ihr seid mir unendlich wichtig!-->
+         </div>
+      </div>
+      <section class="lukas">
+        <div class="row" style="text-align: center;">
+          <div class="col-md-12">
+            <img src="img/rauchen/lukas.jpg" class="timerimg">
+            <h2 style="padding-top: 10px;">#1 Lukas</h2>
+          </div>
+        </div>
+        <div class="row">
+           <div class="col-md-12">
+              <h4>Zeit nicht geraucht:</h4>
+           </div>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+              <!-- Display the countdown timer in an element -->
+              <div class="timec text-center">
+                  <p>Tage - Stunden - Minuten - Sekunden</p>
+                  <h3 id="lukasTag" class="timeFont" style="color: #d8b600;"></h3>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+           <div class="col-md-12">
+              <h3>Stats:</h3>
+              <ul style="font-size: 1.3em;">
+                <li><span id="lukastotal" style="font-weight: bolder; "></span> Ziegareten NICHT geraucht</li>
+                <li><span style="font-weight: bolder;"><span id="lukasmoney"></span> €</span> gespart</li>
+                <li><span style="font-weight: bolder;"><span id="lukastimesave"></span> Stunden</span> Zeit gewonnen</li>
+                <li>Lukas wird <span style="font-weight: bolder;"><span id="lukastime"> </span> Stunden</span> länger Leben</li>
+                <li><span style="font-weight: bolder;"><span id="lukastote"></span> Menschen</span> sind inzwischen vom Rauchen gestorben.</li>
+                <li>Lukas hatte bereits <span style="font-weight: bolder;"><span id="lukasRestets">1</span> mal</span> neu gesatrtet.</li>
+              </ul>
+              <div class="text-center" style="padding: 15px;">
+                <a href="https://www.lukasseyfarth.com/mcount" target="_blank">
+                <button class="btn btn-success btn-lg" id="submit">Motivation</button>
+                </a>
+                <a>
+                <button class="btn btn-reset btn-lg" id="resetButtonlukas">Reset</button>
+                </a>
+              </div>
+
+           </div>
+        </div>
+
+      </section>
+      <section class="uli">
+        <div class="row" style="text-align: center;">
+          <div class="col-md-12">
+            <img src="img/rauchen/uli.png" class="timerimg">
+            <h2 style="padding-top: 10px;">#2 Uli</h2>
+          </div>
+        </div>
+        <div class="row">
+           <div class="col-md-12">
+              <h4>Zeit nicht geraucht:</h4>
+           </div>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+              <!-- Display the countdown timer in an element -->
+              <div class="timec text-center">
+                  <p>Tage - Stunden - Minuten - Sekunden</p>
+                  <h4 id="uliTag" class="timeFont" style="color: #d8b600;"></h4>
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+           <div class="col-md-12">
+              <h3>Stats:</h3>
+              <ul style="font-size: 1.3em;">
+                <li><span id="ulitotal" style="font-weight: bolder; "></span> Ziegareten NICHT geraucht</li>
+                <li><span style="font-weight: bolder;"><span id="ulimoney"></span> €</span> gespart</li>
+                <li><span style="font-weight: bolder;"><span id="ulitimesave"></span> Stunden</span> Zeit gewonnen</li>
+                <li>Uil wird <span style="font-weight: bolder;"><span id="ulitime"> </span> Stunden</span> länger Leben</li>
+                <li><span style="font-weight: bolder;"><span id="ulitote"></span> Menschen</span> sind inzwischen vom Rauchen gestorben.</li>
+
+              </ul>
+              <div class="text-center" style="padding: 15px;">
+                <a href="mcount.html">
+                <button class="btn btn-success btn-lg" id="submit">Motivation</button>
+                </a>
+                <a>
+                <button class="btn btn-reset btn-lg" id="resetButtonuli">Reset</button>
+                </a>
+              </div>
+
+           </div>
+        </div>
+
+      </section>
+      <section class="jörg">
+        <div class="row" style="text-align: center;">
+          <div class="col-md-12">
+            <img src="img/rauchen/jörg.jpeg" class="timerimg">
+            <h2 style="padding-top: 10px;">#3 Jörg</h2>
+          </div>
+        </div>
+        <div class="row">
+           <div class="col-md-12">
+              <h4>Zeit nicht geraucht:</h4>
+           </div>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+              <!-- Display the countdown timer in an element -->
+              <div class="timec text-center">
+                  <p>Tage - Stunden - Minuten - Sekunden</p>
+                  <h4 id="joergTag" class="timeFont" style="color: #d8b600;"></h4>
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+           <div class="col-md-12">
+              <h3>Stats:</h3>
+              <ul style="font-size: 1.3em;">
+                <li><span id="joergtotal" style="font-weight: bolder; "></span> Ziegareten NICHT geraucht</li>
+                <li><span style="font-weight: bolder;"><span id="joergmoney"></span> €</span> gespart</li>
+                <li><span style="font-weight: bolder;"><span id="joergtimesave"></span> Stunden</span> Zeit gewonnen</li>
+                <li>Joerg wird <span style="font-weight: bolder;"><span id="joergtime"> </span> Stunden</span> länger Leben</li>
+                <li><span style="font-weight: bolder;"><span id="joergtote"></span> Menschen</span> sind inzwischen vom Rauchen gestorben.</li>
+              </ul>
+              <div class="text-center" style="padding: 15px;">
+                <a href="mcount.html">
+                <button class="btn btn-success btn-lg" id="submit">Motivation</button>
+                </a>
+                <a>
+                <button class="btn btn-reset btn-lg" id="resetButtonjoerg">Reset</button>
+                </a>
+              </div>
+
+           </div>
+        </div>
+
+      </section>
+      <section class="mario">
+        <div class="row" style="text-align: center;">
+          <div class="col-md-12">
+            <img src="img/rauchen/mario.jpg" class="timerimg">
+            <h2 style="padding-top: 10px;">#4 Mario</h2>
+          </div>
+        </div>
+        <div class="row">
+           <div class="col-md-12">
+              <h4>Zeit nicht geraucht:</h4>
+           </div>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+              <!-- Display the countdown timer in an element -->
+              <div class="timec text-center">
+                  <p>Tage - Stunden - Minuten - Sekunden</p>
+                  <h4 id="marioTag" class="timeFont" style="color: #d8b600;"></h4>
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+           <div class="col-md-12">
+              <h3>Stats:</h3>
+              <ul style="font-size: 1.3em;">
+                <li><span id="mariototal" style="font-weight: bolder; "></span> Ziegareten NICHT geraucht</li>
+                <li><span style="font-weight: bolder;"><span id="mariomoney"></span> €</span> gespart</li>
+                <li><span style="font-weight: bolder;"><span id="mariotimesave"></span> Stunden</span> Zeit gewonnen</li>
+                <li>Mario wird <span style="font-weight: bolder;"><span id="mariotime"> </span> Stunden</span> länger Leben</li>
+                <li><span style="font-weight: bolder;"><span id="mariotote"></span> Menschen</span> sind inzwischen vom Rauchen gestorben.</li>
+              </ul>
+              <div class="text-center" style="padding: 15px;">
+                <a href="mcount.html">
+                <button class="btn btn-success btn-lg" id="submit">Motivation</button>
+                </a>
+                <a>
+                <button class="btn btn-reset btn-lg" id="resetButtonmario">Reset</button>
+                </a>
+              </div>
+
+           </div>
+        </div>
+      </section>
+
+<script src="js/timer.js"></script>
+
+<script src="js/timerObj/startTimer.js"></script>
+      <!-- jQuery -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
+   </body>
+</html>
